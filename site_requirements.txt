@@ -4,3 +4,5 @@ gevent==0.13.8
 mysql-python==1.2.3
 python-memcached==1.48
 
+pycrypto==2.6
+django-sentry==1.6.9.1
