@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     # external
+    'djcelery',
     'emailconfirmation',
     'django_extensions',
     'pagination',
