@@ -1,6 +1,7 @@
 from os import path
 from posixpath import join as url_join
 from imp import find_module
+from celeryconfig import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
