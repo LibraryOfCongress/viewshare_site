@@ -1,4 +1,4 @@
--e git+git://github.com/zepheira/recollection.git@d1428ccde0ba96b1cf05f45a14e87d020660735c#egg=viewshare
+-e git+git://github.com/zepheira/recollection.git@a6d9be3e22b0f75ed30f5e1217605ca62e608cc7#egg=viewshare
 South>=0.7.6
 Django==1.4.3
 pillow==1.7.8
