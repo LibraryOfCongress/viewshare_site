@@ -6,7 +6,7 @@ from django.views.generic.base import RedirectView
 from django.views.generic.base import TemplateView
 from viewshare.utilities.views import PlainTextResponse
 
-urlpatterns = patterns('',
+urlpatterns += patterns('',
 
     # URL mappings for fixed cms pages
     url(r'^tos/$', 'cms.views.details', kwargs={"slug": "tos"}, name="tos"),
