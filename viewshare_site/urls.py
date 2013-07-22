@@ -8,14 +8,6 @@ from viewshare.utilities.views import PlainTextResponse
 
 urlpatterns += patterns('',
 
-    # URL mappings for fixed cms pages
-    url(r'^tos/$', 'cms.views.details', kwargs={"slug": "tos"}, name="tos"),
-    url(r'^about/community/$', 'cms.views.details', kwargs={"slug": "community"}, name="community"),
-    url(r'^about/help/$', 'cms.views.details', kwargs={"slug": "help"}, name="help"),
-    url(r'^about/faq/$', 'cms.views.details', kwargs={"slug": "faq"}, name="faq"),
-    url(r'^about/userguide/$', 'cms.views.details', kwargs={"slug": "userguide"}, name="userguide"),
-    url(r'^augment/patterns/$', 'cms.views.details', kwargs={"slug": "augment-list-patterns"}, name="augment-list-patterns"),
-
     # For legacy purposes
     url(r'^userupload/$', login_required(RedirectView.as_view(url="/upload")),
                                                               name="user_upload"),
@@ -26,6 +18,4 @@ urlpatterns += patterns('',
 
     (r'^uservoice/', include('viewshare.apps.support.uservoice.urls')),
 
-    # CMS url definition should come after all others
-    (r'^', include('cms.urls')),
 )

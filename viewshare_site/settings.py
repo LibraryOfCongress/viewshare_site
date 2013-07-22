@@ -98,14 +98,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     "django.core.context_processors.static",
-    "viewshare.utilities.context_processors.recollection_settings",
+    "viewshare.utilities.context_processors.viewshare_settings",
     "viewshare.apps.vendor.notification.context_processors.notification",
     "viewshare.apps.vendor.announcements.context_processors.site_wide_announcements",
     "viewshare.apps.account.context_processors.account",
     "viewshare.apps.connections.context_processors.invitations",
-    "cms.context_processors.media",
-    'sekizai.context_processors.sekizai',
-
     )
 
 INSTALLED_APPS = (
@@ -125,23 +122,10 @@ INSTALLED_APPS = (
     'django_extensions',
     'pagination',
     'timezones',
-    'uni_form',
-    'django_sorting',
-
+    'crispy_forms',
     'compressor',
     'south',
-
-    # CMS stuff
-    'cms',
-    'mptt',
-    'menus',
-    'sekizai',
-    'reversion',
-    'cms.plugins.text',
-    'cms.plugins.picture',
-    'cms.plugins.link',
-    'cms.plugins.file',
-    'cms.plugins.snippet',
+    'require',
 
     # Freemix specific
     'freemix',
@@ -158,7 +142,6 @@ INSTALLED_APPS = (
     'viewshare.apps.account',
     'viewshare.apps.discover',
     'viewshare.apps.profiles',
-    'viewshare.apps.site_theme',
     'viewshare.apps.collection_catalog',
     'viewshare.apps.connections',
     'viewshare.apps.upload',
@@ -218,11 +201,20 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
     )
 
-# django-cms
-CMS_TEMPLATES = (
-    ('template.html', 'Front Page Template'),
-    ('about/template.html', 'About Page Template'),
-    )
+STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
+
+REQUIRE_BASE_URL = '.'
+
+REQUIRE_JS = 'freemix/js/lib/require.js'
+
+REQUIRE_STANDALONE_MODULES = {
+        'editor-main': {
+            'out': 'editor-built.js',
+            'build_profile': 'editor-build.js'
+        }
+}
+
+REQUIRE_DEBUG = DEBUG
 
 CACHES = {
     'default': {
@@ -261,7 +253,7 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'DEBUG'
         },
-        'recollection': {
+        'viewshare': {
             'handlers': ['console'],
             'level': 'DEBUG'
         }
@@ -278,3 +270,6 @@ except ImportError:
 
 INSTALLED_APPS += LOCAL_INSTALLED_APPS
 MIDDLEWARE_CLASSES = LOCAL_PRE_MIDDLEWARE_CLASSES + MIDDLEWARE_CLASSES + LOCAL_POST_MIDDLEWARE_CLASSES
+
+import djcelery
+djcelery.setup_loader()
