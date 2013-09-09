@@ -1,4 +1,4 @@
--e git+git://github.com/LibraryOfCongress/viewshare.git@72d81ca9d029208f8bcbb0841ce20ec139405e84#egg=viewshare
+-e git+git://github.com/LibraryOfCongress/viewshare.git@a38e22f9004cce00725c604ecd5db5bcb2ad5da2#egg=viewshare
 South>=0.8.1,<2.0
 Django==1.5.1
 pillow==2.0.0
