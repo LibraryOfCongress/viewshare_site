@@ -122,18 +122,19 @@ INSTALLED_APPS = (
     'compressor',
     'south',
     'require',
+    'django_gravatar',
 
     # Freemix specific
     'freemix',
-    'freemix.dataset',
+    'viewshare.apps.legacy.dataset',
     'freemix.exhibit',
-    'freemix.dataset.augment',
-    'freemix.exhibit.share',
+    'viewshare.apps.augment',
+    'viewshare.apps.share',
 
     # Viewshare specific
     'viewshare.apps.vendor.notification',
     'viewshare.apps.vendor.friends',
-    'viewshare.apps.vendor.announcements',
+    'announcements',
 
     'viewshare.apps.account',
     'viewshare.apps.discover',
@@ -148,7 +149,6 @@ INSTALLED_APPS = (
     # Site registration
     'registration',
     'viewshare.apps.moderated_registration',
-
     'gunicorn',
     )
 
@@ -183,6 +183,8 @@ ACCOUNT_REQUIRED_EMAIL = False
 ACCOUNT_EMAIL_VERIFICATION = False
 
 ACCOUNT_ACTIVATION_DAYS = 14
+
+GRAVATAR_DEFAULT_IMAGE = 'identicon'
 
 FIXTURE_DIRS = (
     path.join(module_path("viewshare"), "fixtures"),
@@ -225,6 +227,9 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s %(message)s',
 )
 
+# Validate the request's Host header and protect
+# against host-poisoning attacks
+ALLOWED_HOSTS = ('viewshare.org', )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
