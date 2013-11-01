@@ -96,7 +96,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "viewshare.utilities.context_processors.viewshare_settings",
     "viewshare.apps.vendor.notification.context_processors.notification",
-    "viewshare.apps.account.context_processors.account",
     "viewshare.apps.connections.context_processors.invitations",
     )
 
@@ -124,9 +123,9 @@ INSTALLED_APPS = (
     'django_gravatar',
 
     # Freemix specific
-    'freemix',
+    'viewshare.utilities',
     'viewshare.apps.legacy.dataset',
-    'freemix.exhibit',
+    'viewshare.apps.exhibit',
     'viewshare.apps.augment',
     'viewshare.apps.share',
 
