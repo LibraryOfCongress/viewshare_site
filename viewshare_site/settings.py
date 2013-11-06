@@ -82,7 +82,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'viewshare_site.urls'
 
 AUTHENTICATION_BACKENDS = (
-    'freemix.permissions.RegistryBackend',
+    'viewshare.apps.exhibit.permissions.RegistryBackend',
     'django.contrib.auth.backends.ModelBackend',
     )
 
