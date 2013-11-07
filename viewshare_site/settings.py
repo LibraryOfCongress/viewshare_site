@@ -15,9 +15,6 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = path.join(path.dirname(__file__), '..', "static")
 STATIC_URL = '/static/'
 
-CMS_MEDIA_ROOT = path.join(STATIC_ROOT, 'cms/')
-CMS_MEDIA_URL = path.join(STATIC_URL, 'cms/')
-
 FILE_UPLOAD_PATH = path.join(path.dirname(__file__), '..', "upload")
 
 COMPRESS_ROOT = STATIC_ROOT
@@ -64,9 +61,11 @@ SECRET_KEY = 'changeme'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    )
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
+)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -165,6 +164,9 @@ NOTIFICATION_LANGUAGE_MODULE = 'account.Account'
 TEMPLATE_DIRS = (
     path.join(module_path("viewshare"), "templates"),
     )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
+
 
 # Set to describe the site, properties and the names
 
