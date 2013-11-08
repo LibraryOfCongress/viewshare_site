@@ -114,7 +114,6 @@ INSTALLED_APPS = (
     'emailconfirmation',
     'django_extensions',
     'pagination',
-    'timezones',
     'crispy_forms',
     'compressor',
     'south',
