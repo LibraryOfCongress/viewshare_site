@@ -111,7 +111,6 @@ INSTALLED_APPS = (
 
     # external
     'djcelery',
-    'emailconfirmation',
     'django_extensions',
     'pagination',
     'crispy_forms',
