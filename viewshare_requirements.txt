@@ -1,6 +1,7 @@
--e git+git://github.com/LibraryOfCongress/viewshare.git@1c3181bcc20404a61f7c12cb665bc9892671ec4c#egg=viewshare
+-e git+git://github.com/LibraryOfCongress/viewshare.git@da9a51f3fc6ea2f8886999a8b39567d3105b63b3#egg=viewshare
 South>=0.8.2,<2.0
-Django==1.5.5
+Django==1.6
+django-localflavor-us==1.1
 pillow==2.1.0
 django-announcements==1.0.2
 django-celery==3.0.23
@@ -9,7 +10,7 @@ django_compressor==1.3
 django-extensions==1.2.5
 django-pagination==1.0.7
 django-crispy-forms==1.4.0
-django-require==1.0.4
+django-require==1.0.5
 django-gravatar2==1.1.3
 
 # django-curation is required by viewshare.apps.discover
