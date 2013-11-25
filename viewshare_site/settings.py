@@ -106,7 +106,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.humanize',
-    'django.contrib.markup',
+    #'django.contrib.markup',
     'django.contrib.admin',
 
     # external
