@@ -218,6 +218,8 @@ CACHES = {
     }
 }
 
+CONN_MAX_AGE=160
+
 import logging
 
 logging.basicConfig(
