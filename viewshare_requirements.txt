@@ -1,4 +1,4 @@
--e git+git://github.com/LibraryOfCongress/viewshare.git@b1ef34c45042896be0e3ce71effdabca28b78520#egg=viewshare
+-e git+git://github.com/LibraryOfCongress/viewshare.git@f6d4847d1d54c4c1b97626065c2cb1a32944aa0a#egg=viewshare
 South>=0.8.4,<2.0
 Django==1.6.1
 django-localflavor-us==1.1
@@ -7,7 +7,7 @@ django-announcements==1.0.2
 django-celery==3.0.23
 django-registration==1.0
 django_compressor==1.3
-django-extensions==1.2.5
+django-extensions==1.3.2
 django-pagination==1.0.7
 django-crispy-forms==1.4.0
 django-require==1.0.5
