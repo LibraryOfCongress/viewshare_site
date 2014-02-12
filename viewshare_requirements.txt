@@ -1,6 +1,6 @@
--e git+git://github.com/LibraryOfCongress/viewshare.git@f6d4847d1d54c4c1b97626065c2cb1a32944aa0a#egg=viewshare
+-e git+git://github.com/LibraryOfCongress/viewshare.git@3f22bda9b1cd6af14b4684ca751742324bbe6690#egg=viewshare
 South>=0.8.4,<2.0
-Django==1.6.1
+Django==1.6.2
 django-localflavor-us==1.1
 pillow==2.1.0
 django-announcements==1.0.2
