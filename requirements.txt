@@ -5,7 +5,7 @@ mysql-python==1.2.3
 python-memcached==1.48
 
 pycrypto==2.6
-django-sentry==1.6.9.1
+raven
 librabbitmq==1.0.1
 
 -r viewshare_requirements.txt
