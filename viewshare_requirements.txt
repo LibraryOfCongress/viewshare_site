@@ -27,7 +27,7 @@ django-piston==0.2.3
 diff-match-patch==20110725.1
 
 # django-curation is required by viewshare.apps.discover
--e git+git://github.com/theatlantic/django-curation.git#egg=django-curation
+-e git+git://github.com/theatlantic/django-curation.git@v1.0.11#egg=django-curation
 
 # Uncomment for uservoice integration
 # pycrypto==2.3
