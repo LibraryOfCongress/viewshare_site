@@ -1,6 +1,6 @@
 -e git+git://github.com/LibraryOfCongress/viewshare.git@a626e4be2175eef15f021bcb88ded239f07c1abc#egg=viewshare
 South>=0.8.4,<2.0
-Django==1.6.2
+Django>=1.6.5,<1.7
 django-localflavor-us==1.1
 pillow==2.1.0
 django-announcements==1.0.2
@@ -14,7 +14,7 @@ django-require==1.0.5
 django-gravatar2==1.1.3
 
 # django-curation is required by viewshare.apps.discover
--e git+git://github.com/theatlantic/django-curation.git#egg=django-curation
+-e git+git://github.com/theatlantic/django-curation.git@v1.0.11#egg=django-curation
 
 # Uncomment for uservoice integration
 # pycrypto==2.3
