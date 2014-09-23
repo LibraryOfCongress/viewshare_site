@@ -75,7 +75,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'pagination.middleware.PaginationMiddleware',
     'django.middleware.transaction.TransactionMiddleware',
-
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
     )
 
 ROOT_URLCONF = 'viewshare_site.urls'
@@ -116,8 +118,17 @@ INSTALLED_APPS = (
     'crispy_forms',
     'compressor',
     'south',
-    'require',
-    'django_gravatar',
+
+    # CMS stuff
+    'cms',
+    'mptt',
+    'menus',
+    'sekizai',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
 
     # Freemix specific
     'viewshare.utilities',
@@ -168,7 +179,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 # Set to describe the site, properties and the names
 
-SITE_NAME = "Recollection"
+SITE_NAME = "Viewshare"
 SITE_NAME_STATUS = "BETA"
 CONTACT_EMAIL = "noreply@example.com"
 
