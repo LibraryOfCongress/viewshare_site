@@ -3,10 +3,12 @@ from posixpath import join as url_join
 from imp import find_module
 from celeryconfig import *
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
+    ('Patrick Rourke','prour@loc.gov')
+
 # ('Your Name', 'your_email@domain.com'),
 )
 MEDIA_ROOT = path.join(path.dirname(__file__), '..', "media")
@@ -75,9 +77,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'pagination.middleware.PaginationMiddleware',
     'django.middleware.transaction.TransactionMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
     )
 
 ROOT_URLCONF = 'viewshare_site.urls'
@@ -118,17 +117,8 @@ INSTALLED_APPS = (
     'crispy_forms',
     'compressor',
     'south',
-
-    # CMS stuff
-    'cms',
-    'mptt',
-    'menus',
-    'sekizai',
-    'cms.plugins.text',
-    'cms.plugins.picture',
-    'cms.plugins.link',
-    'cms.plugins.file',
-    'cms.plugins.snippet',
+    'require',
+    'django_gravatar',
 
     # Freemix specific
     'viewshare.utilities',
@@ -145,7 +135,6 @@ INSTALLED_APPS = (
     'viewshare.apps.account',
     'viewshare.apps.discover',
     'viewshare.apps.profiles',
-    'viewshare.apps.collection_catalog',
     'viewshare.apps.connections',
     'viewshare.apps.upload',
 
