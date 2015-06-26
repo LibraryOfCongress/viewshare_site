@@ -1,4 +1,4 @@
--e git+git://github.com/ptrourke/viewshare.git@5.0.3#egg=viewshare
+-e git+git://github.com/LibraryOfCongress/viewshare.git@5.0.3#egg=viewshare
 South>=0.8.4,<2.0
 Django>=1.6.7,<1.7
 django-localflavor-us==1.1
