@@ -18,7 +18,7 @@ django-classy-tags==0.4
 django-sekizai==0.7
 django-mptt==0.5.2
 html5lib==0.95
-django-cms==2.3.6
+django-cms==3.0.14
 
 # Piston is required by viewshare.apps.collection_catalog and uses the following
 django-piston==0.2.3
